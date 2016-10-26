@@ -110,10 +110,6 @@ BOARD_CHARGER_SHOW_PERCENTAGE := true
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-# Power and native tap-to-wake
-TARGET_POWERHAL_VARIANT := mtk-xen0n
-TARGET_POWER_SET_FEATURE_LIB := power-feature-arale
-
 # Audio
 BOARD_USES_MTK_AUDIO := true
 BOARD_CONNECTIVITY_VENDOR := MediaTek

@@ -30,13 +30,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # Recovery allowed devices
 TARGET_OTA_ASSERT_DEVICE := hermes
 
-# Display
-PRODUCT_PACKAGES += \
-    libgralloc_extra \
-    libion_mtk \
-    libui_ext \
-    libgui_ext \
-
 #App YGPS
 PRODUCT_PACKAGES += \
     YGPS \
@@ -46,9 +39,8 @@ PRODUCT_PACKAGES += \
     power.mt6795 \
 
 # Camera
-PRODUCT_PACKAGES += \
-    Snap \
-    libnvramagentclient \
+#PRODUCT_PACKAGES += \
+#    Snap \
 
 # Use CM Gello browser
 PRODUCT_PACKAGES += \
@@ -108,7 +100,8 @@ PRODUCT_COPY_FILES += \
 
 # Charger
 PRODUCT_PACKAGES += \
-      charger_res_images
+    charger \
+    charger_res_images \
 
 # GPS
 PRODUCT_COPY_FILES += \
@@ -149,6 +142,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ramdisk/ueventd.mt6795.rc:root/ueventd.mt6795.rc \
     $(LOCAL_PATH)/ramdisk/init.volte.rc:root/init.volte.rc \
     $(LOCAL_PATH)/ramdisk/init.mal.rc:root/init.mal.rc \
+    $(LOCAL_PATH)/ramdisk/init.ssd.rc:root/init.ssd.rc \
 
 # Permissions
 PRODUCT_COPY_FILES += \

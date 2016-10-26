@@ -32,10 +32,9 @@ key 106   DPAD_RIGHT
 key 115   VOLUME_UP         
 key 114   VOLUME_DOWN       
 key 113   MUTE              
-key 116   POWER             
+key 116   POWER             WAKE             
 key 212   CAMERA
 key 211   FOCUS
-key 195   POWER WAKE
 
 key 16    Q
 key 17    W
