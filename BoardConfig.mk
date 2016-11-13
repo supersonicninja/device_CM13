@@ -183,3 +183,6 @@ BOARD_SEPOLICY_DIRS := \
 ifeq ($(TARGET_DEVICE),hermes)
 $(shell mkdir -p $(OUT)/obj/KERNEL_OBJ/usr)
 endif
+
+# Speed up the build
+USE_CCACHE :=true
