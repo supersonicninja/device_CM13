@@ -14,6 +14,7 @@ type dmlog ,domain;
 # ==============================================
 
 #permissive dmlog;
+#permissive dmlog;
 init_daemon_domain(dmlog)
 
 # Date : 2014/09/23
@@ -25,11 +26,4 @@ allow dmlog debuggerd:unix_stream_socket { read write };
 allow dmlog expdb_device:chr_file { read write };
 allow dmlog fuse:file { write getattr };
 allow dmlog sysfs:file write;
-allow dmlog aee_exp_data_file:file write;
-allow dmlog expdb_block_device:blk_file { read write };
-allow dmlog mmcblk0_block_device:blk_file { read write };
-
-# Date : 2015/07/11
-# Operation : Migration
-# Purpose : for mtk debug mechanism
-allow dmlog aee_exp_data_file:file getattr;
+allow dmlog platformblk_device:blk_file { read write };

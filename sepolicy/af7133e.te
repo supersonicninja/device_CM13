@@ -6,8 +6,8 @@
 # Type Declaration
 # ==============================================
 
-type st480_exec , exec_type, file_type;
-type st480 ,domain;
+type af7133e_exec , exec_type, file_type;
+type af7133e ,domain;
 
 # ==============================================
 # Android Policy Rule
@@ -21,17 +21,17 @@ type st480 ,domain;
 # MTK Policy Rule
 # ==============================================
 
-#permissive st480;
-init_daemon_domain(st480)
-#unconfined_domain(st480)
+#permissive af7133e;
+init_daemon_domain(af7133e)
+#unconfined_domain(af7133e)
 # Purpose : M-sensor daemon for access driver node
-allow st480 msensor_device:chr_file { open ioctl read write };
-allow st480 gsensor_device:chr_file { open ioctl read write };
-allow st480 input_device:dir { search open read write };
-allow st480 input_device:file { open read };
-allow st480 input_device:chr_file { open ioctl read write };
+allow af7133e msensor_device:chr_file { open ioctl read write };
+allow af7133e gsensor_device:chr_file { open ioctl read write };
+allow af7133e input_device:dir { search open read write };
+allow af7133e input_device:file { open read };
+allow af7133e input_device:chr_file { open ioctl read write };
 # Operate data partation directly, need modify later,e.g. use "data/misc/sensor".
-allow st480 system_data_file:dir { write add_name create setattr };
-allow st480 system_data_file:file { open write read create setattr};
-allow st480 system_data_file:dir remove_name;
+allow af7133e system_data_file:dir { write add_name create setattr };
+allow af7133e system_data_file:file { open write read create setattr};
+allow af7133e system_data_file:dir remove_name;
 
